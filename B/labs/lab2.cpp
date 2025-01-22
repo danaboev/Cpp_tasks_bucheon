@@ -17,25 +17,25 @@ public:
 
 	float calculate() {
 		perfomance = point + practice;
-		//cout << "\nYour rate: " << perfomance;
+		//cout << "\nBahongizni kiriting: " << perfomance;
 		return perfomance;
 	}
 	void input() {
-		cout << "Enter your name: ";
+		cout << "Yoshingizni kiriting: ";
 		cin >> name;									//
-		cout << "Enter your surname: ";
+		cout << "Famaliyani kiriting: ";
 		cin >> surname;
-		cout << "Enter your rate os practice ";
+		cout << "Amaliyotdan bohongizni kiriting";
 		cin >> practice;
-		cout << "Enter your rate of points: ";
+		cout << "Bahongizni kiriting: ";
 		cin >> point;
-		cout << "Enter your group: ";
+		cout << "Guruhingizni kiriting: ";
 		cin >> group;
 	}
 
 	
 	void display() {
-	cout << "\n\n\Your name is " << name << endl << "\nYour surname is " << surname << endl<< "\nYour group is " << group << endl<< calculate() << endl;
+	cout << "\n\n\nSalom, Sizning ismingiz " << name << endl << "\nFamiliyangiz " << surname << endl<< "\nSizni guruhingiz " << group << endl<< calculate() << endl;
 	}
 	
 };
@@ -50,17 +50,17 @@ int main() {
 	return 0;
 }
 /*
- ËÐ2
+ ï¿½ï¿½2
+//class worker/
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ WORKER
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ 
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 
-ñîçäàåì êëàññ WORKER
-ïîëå ÈÌß 
-ïîëå ÔÀÌÈËÈß
-ïîëå ÄÎËÆÍÎÑÒÜ
-ïîëå ÎÊËÀÄ
-ïîëå ÏÐÅÌÈß
-ïîëå ÇÀÐÀÁÎÒÍÀß ÏËÀÒÀ
-
-ÎÊËÀÄ è ÏÐÅÌÈß âû÷èñëÿåòñÿ â îòäåëüíîì ôóíêöèè è 
-âûâîäèò ðåçóëüòàòû íà ïîëå ÇÀÐÀÁÎÒÍÀß ÏËÀÒÀ
+ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ 
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 
 */ 

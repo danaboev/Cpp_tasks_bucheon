@@ -4,7 +4,7 @@
 class RATE_sum {
 public:
     static float calculate(float practice, float points) {
-        return practice + points; // Сумма практики и баллов
+        return practice + points; // Amaliy baho hamda oddiy bahoni qo'shish
     }
 };
 
@@ -19,31 +19,31 @@ private:
 
 public:
     void input() {
-        std::cout << "Введите имя студента: ";
+        std::cout << "Talaba ismini kiriting: ";
         std::cin >> firstName;
-        std::cout << "Введите фамилию студента: ";
+        std::cout << "Talaba familiyasini kiriting: ";
         std::cin >> lastName;
-        std::cout << "Введите группу: ";
+        std::cout << "Guruhnu kiriting: ";
         std::cin >> group;
-        std::cout << "Введите баллы практики: ";
+        std::cout << "Amaliyot bahoni kiriting: ";
         std::cin >> practice;
-        std::cout << "Введите баллы: ";
+        std::cout << "Bahoni kiriting: ";
         std::cin >> points;
 
         performance = RATE_sum::calculate(practice, points); // Вычисляем успеваемость
     }
 
     void display() {
-        std::cout << "Студент: " << firstName << " " << lastName << "\n"
-                  << "Группа: " << group << "\n"
-                  << "Успеваемость: " << performance << std::endl;
+        std::cout << "Tanaba: " << firstName << " " << lastName << "\n"
+                  << "Guruh: " << group << "\n"
+                  << "O'zlashtirish: " << performance << std::endl;
     }
 };
 
 class Salaty_sum {
 public:
     static float calculate(float salary, float bonus) {
-        return salary + bonus; // Сумма оклада и премии
+        return salary + bonus; // oylik va qo'shimcha ustamani qo'shish
     }
 };
 
@@ -58,24 +58,24 @@ private:
 
 public:
     void input() {
-        std::cout << "Введите имя сотрудника: ";
+        std::cout << "Ishchini ismini kiriting: ";
         std::cin >> firstName;
-        std::cout << "Введите фамилию сотрудника: ";
+        std::cout << "Ishchi familiaysi: ";
         std::cin >> lastName;
-        std::cout << "Введите должность: ";
+        std::cout << "Lavozim: ";
         std::cin >> position;
-        std::cout << "Введите премию: ";
+        std::cout << "Qo'shimcha oylik: ";
         std::cin >> bonus;
-        std::cout << "Введите оклад: ";
+        std::cout << "Oylik: ";
         std::cin >> salary;
 
         totalSalary = Salaty_sum::calculate(salary, bonus); // Вычисляем зарплату
     }
 
     void display() {
-        std::cout << "Сотрудник: " << firstName << " " << lastName << "\n"
-                  << "Должность: " << position << "\n"
-                  << "Заработная плата: " << totalSalary << std::endl;
+        std::cout << "Ishchi: " << firstName << " " << lastName << "\n"
+                  << "Lavozim: " << position << "\n"
+                  << "Oylik: " << totalSalary << std::endl;
     }
 };
 

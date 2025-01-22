@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-// Базовый класс - Человек
+// Oddiy sinf Odan-Person
 class Person {
 protected:
     std::string name;
@@ -11,48 +11,48 @@ public:
     Person(const std::string& name, int age) : name(name), age(age) {}
 
     void displayInfo() const {
-        std::cout << "Имя: " << name << ", Возраст: " << age << std::endl;
+        std::cout << "Ism: " << name << ", Yosh: " << age << std::endl;
     }
 };
 
-// Производный класс - Студент
+// Meros olayotgan sinf student
 class Student : public Person {
 private:
-    std::string major; // Специальность
+    std::string major; // Yonalish
 
 public:
     Student(const std::string& name, int age, const std::string& major)
         : Person(name, age), major(major) {}
 
     void displayInfo() const {
-        Person::displayInfo(); // Вызов метода базового класса
-        std::cout << "Специальность: " << major << std::endl;
+        Person::displayInfo(); // Asosiy sinf usulini chaqirish
+        std::cout << "Yonalish: " << major << std::endl;
     }
 };
 
-// Производный класс - Сотрудник
+// Merosl olayotgan sinf Student - talaba
 class Employee : public Person {
 private:
-    std::string position; // Должность
+    std::string position; // lavozim
 
 public:
     Employee(const std::string& name, int age, const std::string& position)
         : Person(name, age), position(position) {}
 
     void displayInfo() const {
-        Person::displayInfo(); // Вызов метода базового класса
-        std::cout << "Должность: " << position << std::endl;
+        Person::displayInfo(); //Asosiy sinf usulini chaqirish
+        std::cout << "Lavozim: " << position << std::endl;
     }
 };
 
 int main() {
-    Student student("Иван", 20, "Программирование");
-    Employee employee("Мария", 30, "Разработчик");
+    Student student("Ali", 22, "Dastuerlash");
+    Employee employee("Maryam", 35, "dasturchi");
 
-    std::cout << "Информация о студенте:" << std::endl;
+    std::cout << "Talaba haqaida ma'lumot:" << std::endl;
     student.displayInfo();
 
-    std::cout << "\nИнформация о сотруднике:" << std::endl;
+    std::cout << "\nIshchi haqida malumot:" << std::endl;
     employee.displayInfo();
 
     return 0;

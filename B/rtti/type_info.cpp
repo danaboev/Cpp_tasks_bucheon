@@ -14,14 +14,14 @@ int main() {
     Base* basePtr = new Derived();
 
     // Использование typeid
-    std::cout << "Тип объекта: " << typeid(*basePtr).name() << std::endl;
+    std::cout << "Obyekt turi: " << typeid(*basePtr).name() << std::endl;
 
     // Использование dynamic_cast
     Derived* derivedPtr = dynamic_cast<Derived*>(basePtr);
     if (derivedPtr) {
-        std::cout << "Приведение успешно!" << std::endl;
+        std::cout << "Bajarildi!" << std::endl;
     } else {
-        std::cout << "Приведение не удалось." << std::endl;
+        std::cout << "Bajarilmadi." << std::endl;
     }
 
     delete basePtr;

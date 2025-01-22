@@ -3,24 +3,24 @@
 
 class Student {
 private:
-    std::string name; // Имя студента
-    int age;         // Возраст студента
-    std::string major; // Специальность
+    std::string name; // Student ismi
+    int age;         // Student yoshi
+    std::string major; // Yo'nalish
 
 public:
-    // Конструктор
+    // Konstruktor
     Student(const std::string& name, int age, const std::string& major) 
         : name(name), age(age), major(major) {}
 
-    // Метод для отображения информации о студенте
+    // Ma'lumotni chiqaruvchi metod
     void displayInfo() const {
-        std::cout << "Студент: " << name << "\nВозраст: " << age 
-                  << "\nСпециальность: " << major << std::endl;
+        std::cout << "Talaba: " << name << "\nYosh: " << age 
+                  << "\nYonalish: " << major << std::endl;
     }
 };
 
 int main() {
-    Student student("Иван", 20, "Программирование");
+    Student student("Davron", 20, "Dasturlash");
     student.displayInfo();
 
     return 0;

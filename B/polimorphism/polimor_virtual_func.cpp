@@ -1,41 +1,41 @@
 #include <iostream>
 using namespace std;
 
-// Базовый класс
+// Oddi sinf
 class Animal {
 public:
-    virtual void speak() { // Виртуальная функция
-        cout << "Animal speaks." << endl;
+    virtual void speak() { //virtual funksiya
+        cout << "Hayvon tovushlari" << endl;
     }
 };
 
-// Производный класс
+// Meros oluvchi sinf
 class Dog : public Animal {
 public:
-    void speak() override { // Переопределение виртуальной функции
-        cout << "Dog barks." << endl;
+    void speak() override { // virtual funksiya ni qayta aniqlanishi
+        cout << "Kuchuk gav gav gov." << endl;
     }
 };
 
-// Другой производный класс
+// boshqa meros oluvchi sinf
 class Cat : public Animal {
 public:
-    void speak() override { // Переопределение виртуальной функции
-        cout << "Cat meows." << endl;
+    void speak() override { // virtual funksiya ni qayta aniqlanishi
+        cout << "Mushuk myaov." << endl;
     }
 };
 
-// Функция, принимающая указатель на базовый класс
+// oddiy sinfga ko'rsatgich qabul qiluvchi funksiya
 void makeAnimalSpeak(Animal* animal) {
-    animal->speak(); // Вызов виртуальной функции
+    animal->speak(); // virtual funksiya ni chaqirish
 }
 
 int main() {
     Dog dog;
     Cat cat;
 
-    makeAnimalSpeak(&dog); // Вывод: Dog barks.
-    makeAnimalSpeak(&cat); // Вывод: Cat meows.
+    makeAnimalSpeak(&dog); // chiqarib beradi:  Kuchuk gav gav gov.
+    makeAnimalSpeak(&cat); // chiqarib beradi: Mushuk myaov.
 
     return 0;
 }

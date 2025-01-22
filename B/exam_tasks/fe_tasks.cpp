@@ -110,9 +110,9 @@ public:
         return 2 * (width + height);
     }
 void display() {
-        std::cout << "Ширина: " << width << ", Высота: " << height << std::endl;
-        std::cout << "Площадь: " << area() << std::endl;
-        std::cout << "Периметр: " << perimeter() << std::endl;
+        std::cout << "Eni: " << width << ", Balandligi: " << height << std::endl;
+        std::cout << "Maydon: " << area() << std::endl;
+        std::cout << "Perimetr: " << perimeter() << std::endl;
     }
 };
 
@@ -144,7 +144,7 @@ protected:
 public:
     Person(string name, int age) : name(name), age(age) {}
     virtual void display() const {
-        cout << "Имя: " << name << ", Возраст: " << age << endl;
+        cout << "Ismi: " << name << ", Yosh: " << age << endl;
     }
 };
 class Student : public Person {
@@ -154,7 +154,7 @@ public:
     Student(string name, int age, double grade) : Person(name, age), grade(grade) {}
     void display() const override {
         Person::display();
-        cout << "Оценка: " << grade << endl;
+        cout << "Baho: " << grade << endl;
     }
 };
 
@@ -167,7 +167,7 @@ public:
         return Vector(x + other.x, y + other.y);
     }
     void display() const {
-        cout << "Vector(" << x << ", " << y << ")" << endl;
+        cout << "Vektor(" << x << ", " << y << ")" << endl;
     }
 };
 
@@ -179,7 +179,7 @@ private:
 public:
     Pair(T1 first, T2 second) : first(first), second(second) {}
     void display() const {
-        cout << "Первый: " << first << ", Второй: " << second << endl;
+        cout << "Birinchi: " << first << ", Ikkinchi: " << second << endl;
     }
 };
 
