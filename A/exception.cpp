@@ -43,3 +43,37 @@ try {
 try блок: Содержит код, который может вызвать исключение (например, деление на ноль).
 throw: В случае возникновения ошибки (деление на ноль) генерируется исключение с помощью throw.
 catch блок: При возникновении исключения управление передается в соответствующий catch блок, где происходит обработка ошибки. В данном случае, выводится сообщение об ошибке.*/
+
+
+//Пример кода с использованием исключений
+
+#include <iostream>
+#include <stdexcept>
+
+// Функция, которая делит два числа
+double divide(double numerator, double denominator) {
+    if (denominator == 0) {
+        throw std::runtime_error("Ошибка: деление на ноль!"); // Генерация исключения
+    }
+    return numerator / denominator;
+}
+
+int main() {
+    double a, b;
+
+    std::cout << "Введите числитель: ";
+    std::cin >> a;
+    std::cout << "Введите знаменатель: ";
+    std::cin >> b;
+
+    try {
+        double result = divide(a, b); // Попытка деления
+        std::cout << "Результат: " << result << std::endl;
+    } catch (const std::runtime_error& e) {
+        std::cout << "Обработано исключение: " << e.what() << std::endl; // Обработка исключения
+    } catch (const std::exception& e) {
+        std::cout << "Обработано другое исключение: " << e.what() << std::endl;
+    }
+
+    return 0;
+}
