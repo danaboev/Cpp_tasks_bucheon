@@ -48,19 +48,17 @@ int main() {
 
 
 	return 0;
-}
-/*
- ��2
-//class worker/
-������� ����� WORKER
-���� ��� 
-���� �������
-���� ���������
-���� �����
-���� ������
-���� ���������� �����
-
-����� � ������ ����������� � ��������� ������� � 
-������� ���������� �� ���� ���������� �����
-
+}/*
+ЛР2 
+ 
+ WORKER clasini(sinfini) yaratamiz 
+ISM uchun maydon(joy) 
+FAMILIYA uchun maydon(joy) 
+LAVOZIM uchun maydon(joy) 
+OYLIK uchun maydon(joy) 
+BONUS uchun maydon(joy) 
+UMUMIY_OYLIK uchun maydon(joy) 
+ 
+OYLIK va BONUS alohida funksiya hisoblanadi 
+va qiymatini(javobini) UMUMIY_OYLIK dan chiqarib beradi
 */ 
