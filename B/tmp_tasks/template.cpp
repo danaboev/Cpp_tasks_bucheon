@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-// Шаблон класса Box
+// sinf Box
 template <typename T>
 class Box {
 public:
@@ -10,20 +10,20 @@ public:
     // Конструктор
     Box(T v) : value(v) {}
 
-    // Метод для отображения значения
+    // qiymatni chiqaruvchi metod
     void display() {
-        std::cout << "Value: " << value << std::endl;
+        std::cout << "Qiymat: " << value << std::endl;
     }
 };
 
 int main() {
-    Box<int> intBox(10);      // Создаем Box для int
-    Box<double> doubleBox(5.5); // Создаем Box для double
-    Box<std::string> strBox("Hello"); // Создаем Box для string
+    Box<int> intBox(10);      // Box ni int uchun yartamiz
+    Box<double> doubleBox(5.5); // double uchun box
+    Box<std::string> strBox("Salom"); // string uchun box
 
-    intBox.display();         // Вывод: Value: 10
-    doubleBox.display();      // Вывод: Value: 5.5
-    strBox.display();         // Вывод: Value: Hello
+    intBox.display();         // : qiymat: 10
+    doubleBox.display();      // : qiymat: 5.5
+    strBox.display();         // : qiymat: Hello
 
     return 0;
 }
@@ -32,7 +32,7 @@ int main() {
 
 #include <iostream>
 
-// Специализация шаблона класса Box для типа int
+// Int turi uchun Box sinf shablonining ixtisoslashuvi
 template <>
 class Box<int> {
 public:
@@ -46,8 +46,8 @@ public:
 };
 
 int main() {
-    Box<int> intBox(42); // Создаем Box<int>
-    intBox.display();     // Вывод: Integer: 42
+    Box<int> intBox(42); //  Box <int> uchun yaratamiz
+    intBox.display();     //  Integer: 42 chiqadi
 
     return 0;
 }
@@ -56,7 +56,7 @@ int main() {
 
 #include <iostream>
 
-// Основной шаблон для Box
+// Box uchun asosiy shablon
 template <typename T, typename U>
 class Box {
 public:
@@ -66,11 +66,11 @@ public:
     Box(T f, U s) : first(f), second(s) {}
 
     void display() {
-        std::cout << "First: " << first << ", Second: " << second << std::endl;
+        std::cout << "Birinchi: " << first << ", Ikkinchi: " << second << std::endl;
     }
 };
 
-// Частичная специализация для Box, где второй тип - int
+// Ikkinchi turi int bo'lgan Box uchun qisman ixtisoslashuv
 template <typename T>
 class Box<T, int> {
 public:
@@ -80,7 +80,7 @@ public:
     Box(T f, int s) : first(f), second(s) {}
 
     void display() {
-        std::cout << "First: " << first << ", Second (int): " << second << std::endl;
+        std::cout << "Birinchi: " << first << ", Ikkinchi (int): " << second << std::endl;
     }
 };
 
@@ -88,8 +88,8 @@ int main() {
     Box<double, std::string> box1(3.14, "Pi");
     Box<std::string, int> box2("Age", 30);
 
-    box1.display(); // Вывод: First: 3.14, Second: Pi
-    box2.display(); // Вывод: First: Age, Second (int): 30
+    box1.display(); // Chiqadi: Birinchi: 3.14, Ikkinchi: Pi
+    box2.display(); // Вывод: Birinchi: Age, Ikkinchi (int): 30
 
     return 0;
 }

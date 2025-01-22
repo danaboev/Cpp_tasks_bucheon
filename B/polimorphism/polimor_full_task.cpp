@@ -1,9 +1,9 @@
 
 class Vehicle {
 public:
-    virtual void start() = 0; // Чистая виртуальная функция
-    virtual void stop() = 0;  // Чистая виртуальная функция
-    virtual void displayInfo() = 0; // Чистая виртуальная функция
+    virtual void start() = 0; // Aniq virtual funksiya
+    virtual void stop() = 0;  // Aniq virtual funksiya
+    virtual void displayInfo() = 0; // Aniq virtual funksiya
 };
 
 class Car : public Vehicle {

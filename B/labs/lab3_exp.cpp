@@ -21,7 +21,7 @@ public:
     }
 
     std::string getInfo() const {
-        return "Name: " + name + ", Age: " + std::to_string(age) + ", Average Grade: " + std::to_string(averageGrade);
+        return "ISM: " + name + ", YOSH: " + std::to_string(age) + ", O'RTACHA BAHO: " + std::to_string(averageGrade);
     }
 };
 
@@ -31,15 +31,15 @@ int main() {
     int age;
     double averageGrade;
 
-    std::cout << "Enter student's name: ";
+    std::cout << "Studentni ismini kiriting: ";
     std::getline(std::cin, name);
     student.setName(name);
 
-    std::cout << "Enter student's age: ";
+    std::cout << "Studentni yosshini kiriting: ";
     std::cin >> age;
     student.setAge(age);
 
-    std::cout << "Enter student's average grade: ";
+    std::cout << "Srudentni o'rtacha bahosini kiriting: ";
     std::cin >> averageGrade;
     student.setAverageGrade(averageGrade);
 
@@ -53,7 +53,7 @@ int main() {
 
 class Vehicle {
 public:
-    virtual double getSpeed() const = 0; // Чисто виртуальный метод
+    virtual double getSpeed() const = 0; // sov virtual funksiya
 };
 
 class Car : public Vehicle {
@@ -75,25 +75,25 @@ public:
             std::cerr << "Time cannot be zero." << std::endl;
             return 0;
         }
-        return distance / time; // скорость = расстояние / время
+        return distance / time; // tezlik = masofa / vaqt
     }
 };
 
 int main() {
     double carSpeed;
-    std::cout << "Enter the speed of the car: ";
+    std::cout << "Avtomobil tezligini kiriting : ";
     std::cin >> carSpeed;
     Car myCar(carSpeed);
-    std::cout << "Car speed: " << myCar.getSpeed() << " km/h" << std::endl;
+    std::cout << "Avtomobil tezligi: " << myCar.getSpeed() << " km/s" << std::endl;
 
     double distance, time;
-    std::cout << "Enter the distance traveled by bicycle (km): ";
+    std::cout << "Velosipedda bosib o'tgan masofangizni kiriting(km): ";
     std::cin >> distance;
-    std::cout << "Enter the time taken (hours): ";
+    std::cout << "Yo'lga ketgan vaqtingizni kiriting(soatda): ";
     std::cin >> time;
 
     Bicycle myBicycle;
-    std::cout << "Bicycle speed: " << myBicycle.getSpeed(distance, time) << " km/h" << std::endl;
+    std::cout << "Velosiped tezligi: " << myBicycle.getSpeed(distance, time) << " km/s" << std::endl;
 
     return 0;
 }

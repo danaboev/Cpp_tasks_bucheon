@@ -1,7 +1,7 @@
 #include <iostream>
 #include <exception>
-///Пример: создание собственного класса исключения
-// Определение собственного класса исключения
+/// Misol: o'zingizning istisno sinfingizni yaratish
+// Maxsus istisno sinfini aniqlash
 class MyException : public std::exception {
 public:
     const char* what() const noexcept override {
@@ -11,41 +11,40 @@ public:
 
 int main() {
     try {
-        throw MyException();  // Генерация исключения
+        throw MyException();  // Istisno avlod genatsiyasi
     } catch (const MyException& e) {
-        std::cout << e.what() << std::endl;  // Обработка исключения
+        std::cout << e.what() << std::endl;  // Istisno bilan ishlash
     } catch (const std::exception& e) {
-        std::cout << e.what() << std::endl;  // Обработка других стандартных исключений
+        std::cout << e.what() << std::endl;  // Оboshqa standart istisnolarni qayta ishlash
     }
     
     return 0;
 }
 
 
-//Структура обработки исключений
+// Istisnolarni qayta ishlash tuzilishi
 try {
-    // Код, который может вызвать исключение
+    // Istisnoga olib kelishi mumkin bo'lgan kod
     int x = 10;
     int y = 0;
     if (y == 0) {
-        throw std::runtime_error("Ошибка: деление на ноль!"); // Генерация исключения
+        throw std::runtime_error("Ошибка: деление на ноль!"); // Istisno avlod generatori
     }
-    int result = x / y;  // Этот код не будет выполнен
+    int result = x / y;  // Ushbu kod bajarilmaydi
 } catch (const std::runtime_error& e) {
-    // Обработка исключения
+    // Istisno bilan ishlash
     std::cout << "Обработано исключение: " << e.what() << std::endl;
 } catch (const std::exception& e) {
-    // Обработка других стандартных исключений
+    // Boshqa standart istisnolarni qayta ishlash
     std::cout << "Обработано другое исключение: " << e.what() << std::endl;
 }
 
-/*Объяснение структуры
-try блок: Содержит код, который может вызвать исключение (например, деление на ноль).
-throw: В случае возникновения ошибки (деление на ноль) генерируется исключение с помощью throw.
-catch блок: При возникновении исключения управление передается в соответствующий catch блок, где происходит обработка ошибки. В данном случае, выводится сообщение об ошибке.*/
+/* Strukturani tushuntirish
+sinab ko'ring blok: istisnoga olib kelishi mumkin bo'lgan kodni o'z ichiga oladi (masalan, nolga bo'linish).
+throw: agar xato yuzaga kelsa (nolga bo'linish), throw yordamida istisno hosil bo'ladi.
+catch blok: istisno yuzaga kelganda, boshqaruv tegishli catch blokiga o'tkaziladi, bu erda xato qayta ishlanadi. Bunday holda, xato xabari ko'rsatiladi.*/
 
-
-//Пример кода с использованием исключений
+//Istisnolardan foydalangan holda namunaviy kod
 
 #include <iostream>
 #include <stdexcept>
@@ -53,7 +52,7 @@ catch блок: При возникновении исключения упра�
 // Функция, которая делит два числа
 double divide(double numerator, double denominator) {
     if (denominator == 0) {
-        throw std::runtime_error("Ошибка: деление на ноль!"); // Генерация исключения
+        throw std::runtime_error("Xato: Nolga bo'lish mumkin emas!!!"); // Istisno avlod generatri
     }
     return numerator / denominator;
 }
@@ -61,18 +60,18 @@ double divide(double numerator, double denominator) {
 int main() {
     double a, b;
 
-    std::cout << "Введите числитель: ";
+    std::cout << "Hisoblagichni kiriting: ";
     std::cin >> a;
-    std::cout << "Введите знаменатель: ";
+    std::cout << "Maxrajni kiriting: ";
     std::cin >> b;
 
     try {
-        double result = divide(a, b); // Попытка деления
-        std::cout << "Результат: " << result << std::endl;
+        double result = divide(a, b); // Bo'linishga urinish
+        std::cout << "Natija: " << result << std::endl;
     } catch (const std::runtime_error& e) {
-        std::cout << "Обработано исключение: " << e.what() << std::endl; // Обработка исключения
+        std::cout << "Istisno bilan ishlov berildi: " << e.what() << std::endl; // Обработка исключения
     } catch (const std::exception& e) {
-        std::cout << "Обработано другое исключение: " << e.what() << std::endl;
+        std::cout << "Boshqa istisno ko'rib chiqildi: " << e.what() << std::endl;
     }
 
     return 0;

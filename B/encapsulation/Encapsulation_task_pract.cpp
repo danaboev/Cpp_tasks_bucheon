@@ -3,24 +3,24 @@
 
 class Employee {
 private:
-    std::string name; // Имя сотрудника
-    int age;         // Возраст сотрудника
-    std::string position; // Должность
+    std::string name; // Ishchini ismi
+    int age;         // Ishchini yoshi
+    std::string position; // Lavozim
 
 public:
-    // Конструктор
+    // Konstruktor
     Employee(const std::string& name, int age, const std::string& position) 
         : name(name), age(age), position(position) {}
 
-    // Метод для отображения информации о сотруднике
+    // Ma'lumotni chiqaruvchi metod
     void displayInfo() const {
-        std::cout << "Сотрудник: " << name << "\nВозраст: " << age 
-                  << "\nДолжность: " << position << std::endl;
+        std::cout << "Ishchi: " << name << "\nYosh: " << age 
+                  << "\nLavozim: " << position << std::endl;
     }
 };
 
 int main() {
-    Employee employee("Мария", 30, "Разработчик");
+    Employee employee("Osiyo", 30, "Dasturchi");
     employee.displayInfo();
 
     return 0;

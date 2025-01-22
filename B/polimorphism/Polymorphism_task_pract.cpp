@@ -3,34 +3,34 @@
 using namespace std;
 
 //virtual
-// Базовый класс
+// Oddiy sinf
 class Animal {
 public:
-    // Виртуальная функция для звука
+    // ovoz uchun virtual funksiya
     virtual void sound() {
-        cout << "Некоторый общий звук животного" << endl;
+        cout << "Umumy bo'lgan ba'zi hayvonlar tovushi" << endl;
     }
 };
 
-// Производный класс: Собака
+// Meros oluvchi sinf Kuchuk-dog
 class Dog : public Animal {
 public:
-    void sound() override { // Переопределение функции базового класса
-        cout << "Гав" << endl;
+    void sound() override { // Oddiy sinfni qayta aniqlasnishi
+        cout << "gow gow" << endl;
     }
 };
 
-// Производный класс: Кошка
+// Meros oluvchi sinf mushuk Cat
 class Cat : public Animal {
 public:
-    void sound() override { // Переопределение функции базового класса
-        cout << "Мяу" << endl;
+    void sound() override { // Oddiy sinfni qayta aniqlasnishi
+        cout << "meaow" << endl;
     }
 };
 
 int main() {
-    Animal* animal1 = new Dog(); // Вверхнее приведение
-    Animal* animal2 = new Cat(); // Вверхнее приведение
+    Animal* animal1 = new Dog(); // birinchi misol
+    Animal* animal2 = new Cat(); // ikkichi misol
 
     animal1->sound(); // Вывод: Гав
     animal2->sound(); // Вывод: Мяу
@@ -51,23 +51,23 @@ using namespace std;
 class Print {
 public:
     void show(int i) {
-        cout << "Целое число: " << i << endl;
+        cout << "Butub son: " << i << endl;
     }
 
     void show(double d) {
-        cout << "Дробное число: " << d << endl;
+        cout << "Bo'lingan son : " << d << endl;
     }
 
     void show(string s) {
-        cout << "Строка: " << s << endl;
+        cout << "Qator: " << s << endl;
     }
 };
 
 int main() {
     Print print;
-    print.show(5);        // Вызывает show(int)
-    print.show(5.5);      // Вызывает show(double)
-    print.show("Привет");  // Вызывает show(string)
+    print.show(5);        //  show(int)chaqiradi
+    print.show(5.5);      //  show(double)chaqiradi
+    print.show("Salom");  //  show(string) chaqiradi
 
     return 0;
 }
